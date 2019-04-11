@@ -23,7 +23,7 @@ class FileController {
 
         console.log(req.file);
 
-        return res.json(file)
+        return res.json(file);
 
     }
 }

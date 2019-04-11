@@ -13,7 +13,7 @@ const io = require ('socket.io')(server);
 
 io.on('connection', socket =>{
 
-    console.log('ta bombando');
+    console.log('Status: OK');
     socket.on('connectRoom', box =>{
 
         socket.join(box);
@@ -40,4 +40,4 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')));
 
 app.use(require('./routes'));
 
-server.listen (3333);
+server.listen (process.env.PORT || 3333);
